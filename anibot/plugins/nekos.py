@@ -4,10 +4,6 @@ from anekos import NekosLifeClient, NSFWImageTags, SFWImageTags
 from pyrogram.errors import MediaEmpty, WebpageCurlFailed
 from wget import download
 
-from userge import Message, userge
-
-from .nsfw import age_verification
-
 client = NekosLifeClient()
 
 NSFW = [x for x in dir(NSFWImageTags) if not x.startswith("__")]
