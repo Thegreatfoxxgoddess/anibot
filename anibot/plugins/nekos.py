@@ -22,15 +22,8 @@ for m in SFW:
     neko_help += f"<code>{m.lower()}</code>   "
 
 
-@userge.on_cmd(
-    "nekos",
-    about={
-        "header": "Get NSFW / SFW stuff from nekos.life",
-        "flags": {"nsfw": "For random NSFW"},
-        "usage": "{tr}nekos\n{tr}nekos -nsfw\n{tr}nekos [Choice]",
-        "Choice": neko_help,
-    },
-)
+@anibot.on_message(filters.command(["anime", f"anime{BOT_NAME}"], prefixes=trg))
+@control_user
 async def neko_life(message: Message):
     choice = message.input_str
     if "-nsfw" in message.flags:
