@@ -13,3 +13,4 @@ natsort
 apscheduler
 lxml
 html5lib
+git+https://github.com/Nekos-life/Async-nekos.life-wrapper
