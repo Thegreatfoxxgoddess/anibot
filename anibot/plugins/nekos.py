@@ -18,7 +18,7 @@ for m in SFW:
     neko_help += f"<code>{m.lower()}</code>   "
 
 
-@anibot.on_message(filters.command(["anime", f"anime{BOT_NAME}"], prefixes=trg))
+@anibot.on_message(filters.command(["nekos", f"nekos{BOT_NAME}"], prefixes=trg))
 @control_user
 async def neko_life(message: Message):
     choice = message.input_str
